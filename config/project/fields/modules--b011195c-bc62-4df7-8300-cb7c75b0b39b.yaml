@@ -1,0 +1,16 @@
+columnSuffix: mfedbuog
+contentColumnType: string
+fieldGroup: 2d120b16-ef61-4e55-902e-535a963add67 # Project
+handle: modules
+instructions: null
+name: Modules
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_modules}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

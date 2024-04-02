@@ -1,0 +1,45 @@
+columnSuffix: biokgbxl
+contentColumnType: string
+fieldGroup: f3dea8d1-5871-4150-8ebb-2aeaf3fbde28 # User
+handle: userRole
+instructions: null
+name: 'User Role'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Admin
+        -
+          - value
+          - admin
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Student
+        -
+          - value
+          - student
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Reader
+        -
+          - value
+          - reader
+        -
+          - default
+          - '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

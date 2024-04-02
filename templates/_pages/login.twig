@@ -1,0 +1,46 @@
+{% extends "_layouts/site" %}
+{% set asset = entry.logo.one() %}
+
+{% block content %}
+
+    {% if asset %}
+        <img class="absolute left-1/10 top-8 w-1/12" src="{{ asset.getUrl() }}" alt="{{ asset.title }}">
+    {% endif %}
+    <div class="w-4/5 mx-auto h-screen">
+        <div class="flex justify-between items-center h-full">
+            <div class="w-1/2">
+                <div class="mb-12">
+                    <h1 class="font-bold text-7xl mb-12">
+                        {{ entry.loginTitle }}
+                    </h1>
+                    <div class="w-4/5">
+                        {{ entry.loginIntro }}
+                    </div>
+                </div>
+
+                {# Request acces form #}
+                <form class="w-1/2">
+                    <h3 class="site-h3">
+                        {{ "Ask access to the platform"|t }}
+                    </h3>
+                    <div class="relative">
+                        {% include "_includes/forms/requestAccessForm.twig" %}
+                    </div>
+                </form>
+            </div>
+
+            {# Login form #}
+            <div class="w-1/4">
+                <h1 class="site-h1 w-fit mx-auto">{{ "Log in"|t }}</h1>
+                {% include "_includes/forms/loginForm.twig" %}
+            </div>
+        </div>
+
+        {# Display flash message if user has succesfully send a "request access" mail #}
+        {% if craft.app.session.hasFlash('notice') %}
+            <p class="px-4 my-2 abosolute bg-white text-dark-blue rounded right-0 bottom-0">{{ craft.app.session.getFlash('notice') }}</p>
+        {% elseif craft.app.session.hasFlash('error') %}
+            <p class="px-4 my-2 abosolute bg-red text-white rounded right-0 bottom-0">{{ craft.app.session.getFlash('error') }}</p>
+        {% endif %}
+    </div>
+{% endblock %}

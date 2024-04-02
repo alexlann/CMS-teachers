@@ -1,0 +1,44 @@
+{% extends "_layouts/site" %}
+
+{% block content %}
+    {% include "_includes/sideBar.twig" %}
+    <div class="content-wrapper">
+        {% include "_includes/searchBar.twig" %}
+        <h1>
+            {{ entry.title }}
+        </h1>
+
+        <h2>
+            {{ "Recently watched"|t }}
+        </h2>
+        <div class="flex flex-wrap gap-6 mb-12">
+            {% set themes = craft.entries.section(['generalTheme', 'theologicalTheme']).limit(5) %}
+            {% for theme in themes %}
+                {% include "_includes/cards/theme.twig" with {
+                    uri: theme.uri,
+                    icon: theme.icon,
+                    title: theme.title
+                } %}
+            {% endfor %}
+        </div>
+
+        <h2>
+            {{ "Recent projects"|t }}
+        </h2>
+        <div class="flex flex-wrap items-stretch gap-6">
+            <div class="bg-blue rounded-2xl w-60 border border-light-gray flex justify-center items-center text-white text-8xl hover:bg-mid-blue transition-colors duration-300">
+                +
+            </div>
+            {% set projects = craft.entries.section('project').limit(5) %}
+            {% for project in projects %}
+                {% include "_includes/cards/project.twig" with {
+                    uri: project.uri,
+                    thumbnail: project.thumbnail.one(),
+                    title: project.title,
+                    type: project.projectType,
+                } %}
+            {% endfor %}    
+        </div>
+    </div>
+    
+{% endblock %}

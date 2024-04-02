@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 1a5e6820-d72c-4a6e-bbee-bcdb780052ac # Template
+handle: templateSitelink
+instructions: null
+name: 'Template Sitelink'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_templatesitelink}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

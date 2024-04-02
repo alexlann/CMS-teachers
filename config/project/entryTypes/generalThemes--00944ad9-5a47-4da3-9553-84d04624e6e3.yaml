@@ -1,0 +1,43 @@
+fieldLayouts:
+  4713cd23-c8e8-4c44-8bb4-f7ebf9a27eee:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 93042ec1-5ed5-44c8-a17e-e49aad0ac269
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a75b0aba-6db2-4a22-8aeb-2885d7b5db20
+        userCondition: null
+handle: generalThemes
+hasTitleField: false
+name: 'Algemene thema''s'
+section: e262903a-a731-4cb4-9719-6fc8ff9fc1a7 # Algemene thema's
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

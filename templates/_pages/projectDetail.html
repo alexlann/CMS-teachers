@@ -1,0 +1,121 @@
+{% extends "_layouts/site" %}
+
+{% block content %}
+    {% include "_includes/sideBar.twig" %}
+
+    <div class="content-wrapper">
+        {% include "_includes/searchBar.twig" %}
+        <h1>
+            {{ entry.title }}
+        </h1>
+
+        <h2>Themadossier partnerkeuze</h2>
+    </div>
+
+    <!-- sticky toolbar -->
+    <div class="toolbar sticky top-0">
+        <div class="ml-17.5% w-11/12 -mt-4 py-6 bg-light-blue">
+            <div class="flex justify-between content-center">
+                <div class="h-fit w-3/4 flex gap-6 flex-wrap">
+                    <div>
+                        <label for="color">Color palet</label>
+                        <select name="color" id="color">
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">green</option>
+                            <option value="yellow">yellow</option>
+                            <option value="orange">orange</option>
+                            <option value="purple">purple</option>
+                            <option value="gray">gray</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Test:</label>
+                        <input name="" id="" type="text">
+                    </div>
+                    <div>
+                        <label for="bg-color">Background color</label>
+                        <select name="bg-color" id="bg-color">
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">green</option>
+                            <option value="yellow">yellow</option>
+                            <option value="orange">orange</option>
+                            <option value="purple">purple</option>
+                            <option value="gray">gray</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="text-color">Text color</label>
+                        <select name="text-color" id="text-color">
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">green</option>
+                            <option value="yellow">yellow</option>
+                            <option value="orange">orange</option>
+                            <option value="purple">purple</option>
+                            <option value="gray">gray</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="font-size">Font size</label>
+                        <input type="number" name="font-size" id="font-size">
+                    </div>
+                    <div>
+                        <label for="hierarchy">Hierarchy</label>
+                        <input type="number" name="font-size" id="font-size">
+                    </div>
+                </div>
+                <div class="h-full space-x-3 w-1/4 flex justify-end content-center">
+                    <button class="btn-primary-border whitespace-nowrap">{{ "Preview page"|t }}</button>
+                    <button class="btn-primary-alert">{{ "Save"|t }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ml-17.5% w-11/12">
+        <div class="w-full rounded-xl bg-white mb-6">
+            <div class="w-10/12 mx-auto py-12">
+                <header class="flex justify-between items-center mb-12">
+                    <div>
+                        <p class="font-bold text-xl">Alexander Lannoy</p>
+                    </div>
+                    <nav>
+                        <ul class="flex gap-8">
+                            <li class="font-bold text-dark-blue hover:text-blue">
+                                <a href="{{ craft.app.request.absoluteUrl }}/home">Home</a>
+                            </li>
+                            <li class="hover:text-blue">
+                                <a href="{{ craft.app.request.absoluteUrl }}/fotos">Foto's</a>
+                            </li>
+                            <li class="hover:text-blue">
+                                <a href="{{ craft.app.request.absoluteUrl }}/bronnen">Bronnen</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="columns-2 gap-8">
+                    <div class="break-after-column">
+                        <h1>
+                            Dit is een testproject
+                        </h1>
+                        <h2>Themadossier partnerkeuze</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint est quos, similique quis at quo ipsum non incidunt beatae voluptates mollitia cupiditate laborum culpa, praesentium autem consectetur porro! Eveniet, aliquam.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="w-full rounded-t-xl" src="/uploads/thumbnail.png" alt="thumbnail">
+                        <p class="bg-light-gray rounded-b-xl py-2 px-3">Fig. 1: Dit is uitleg over de foto</p>
+                    </div>
+                </div>
+                <p class="mt-6 cms-component">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum est ipsum dolor ipsam explicabo molestias aperiam distinctio voluptate illum libero animi quibusdam eius nobis quo expedita, praesentium officia fugit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident doloribus veritatis fuga totam iusto ipsam reprehenderit modi, neque fugiat pariatur, quia atque facilis, velit exercitationem odit facere nam? Reprehenderit.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

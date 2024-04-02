@@ -1,0 +1,73 @@
+{% macro errorList(errors) %}
+    {% if errors %}
+        {{ ul(errors, {class: 'errors'}) }}
+    {% endif %}
+{% endmacro %}
+
+<form id="projectForm" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+    {{ csrfInput() }}
+    {{ actionInput('entries/save-entry') }}
+    {{ redirectInput('projecten/{slug}') }}
+    {# The form only updates the entry of the active page itself, altough a sectionId has been given #}
+    {{ hiddenInput('sectionId', enroll.id) }}
+    {{ hiddenInput('enabled', '1') }}
+    
+    <h1 class="site-h1 w-full flex gap-3">
+        <input type="text" id="title", name="title" placeholder="Project title" class="bg-transparent border-0 focus:bg-transparent focus:border-0 outline-0 w-full">
+    </h1>
+    {{ _self.errorList(entry.getErrors('title')) }}
+
+    <div class="flex gap-6">
+        {# themes dropdown #}
+        <div>
+            <label for="fields[theme]">{{ "Theme"|t }}</label><br>
+            <select id="fields[theme]" name="fields[theme][]">
+                {% nav possibleTheme in possibleThemes %}
+                    <option value="{{ possibleTheme.id }}">
+                        {{ possibleTheme.title }}
+                    </option>
+                {% endnav %}
+            </select>
+            {{ _self.errorList(entry.getErrors('fields[theme]')) }}
+        </div>
+
+        {# projectTypes dropdown #}
+        <div>
+            <label for="fields[projectType]">{{ "Project type"|t }}</label><br>
+            <select name="fields[projectType]" id="fields[projectType]">
+                {% for option in projectType.options %}
+                    <option value="{{ option.value }}">
+                        {{ option.label }}
+                    </option>
+                {% endfor %}
+            </select>
+            {{ _self.errorList(entry.getErrors('fields[projectType]')) }}
+        </div>
+    </div>
+
+    <ul id="newProjectRadio" class="flex gap-6 mt-6">
+        {% nav possibleTemplateType in possibleTemplateTypes %}
+            <li class="bg-white rounded w-96 h-fit">
+                <label for={{possibleTemplateType.id}} class="bg-white rounded w-96 h-fit hover:cursor-pointer">
+                    {% set thumbnail = possibleTemplateType.thumbnail.one() %}
+                    <img src="{{ thumbnail ? thumbnail.getUrl({ quality: 70 }) }}" alt="{{ thumbnail.title }}">
+
+                    <input type="radio"
+                        name="fields[templateType][]"
+                        value="{{ possibleTemplateType.id }}"
+                        id="{{ possibleTemplateType.id }}"
+                        class="opacity-0"
+                    >
+                    <h3 class="text-center">
+                        {{ possibleTemplateType.title }}
+                    </h3>
+                </label>
+            </li>
+        {% endnav %}
+    </ul>
+
+    <div class="flex gap-6 justify-end mt-6">
+        <button id="exit-new-project" class="btn-secondary">{{ "Back"|t }}</button>
+        <button type="submit" class="btn-primary">{{ "Continue"|t }}</button>
+    </div>
+</form>

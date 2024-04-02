@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
+
+/* headings */
+h1 {
+    margin-top: 50px;
+    @apply font-bold text-3xl mb-6
+}
+
+h2 {
+    @apply font-bold mb-4 border-l-2 border-dark-blue w-fit pl-2
+}
+
+h3 {
+    @apply font-bold mb-4
+}
+
+/* wrappers */
+.content-wrapper {
+    @apply ml-17.5% mt-12 w-11/12
+}
+
+/* buttons */
+.btn-primary, .btn-primary-lg, .btn-primary-border, .btn-primary-alert {
+    @apply border-2 border-dark-blue text-white font-bold rounded-lg py-2 px-4 h-fit w-fit transition-colors duration-300
+}
+
+.btn-primary, .btn-primary-lg {
+    @apply bg-dark-blue hover:bg-mid-blue hover:border-mid-blue
+}
+
+.btn-primary-lg {
+    @apply w-full uppercase
+}
+
+.btn-primary-alert {
+    @apply bg-red border-red hover:border-light-red hover:bg-light-red
+}
+
+.btn-primary-border {
+    @apply bg-transparent text-dark-blue hover:bg-mid-blue border-mid-blue hover:text-white transition-colors duration-300
+}
+
+.btn-secondary {
+    @apply font-bold text-dark-blue hover:text-mid-blue transition-colors duration-300
+}
+
+/* form */
+.input-large {
+    @apply py-3 px-4 w-full rounded-lg border border-light-gray
+}
+
+/* extending tailwind */
+.left-1\/10 {
+    left: 10%;
+}
+
+.w-15\% {
+    width: 15%;
+}
+
+.ml-17\.5\% {
+    padding-left: 17.5%;
+}
+
+/* navigation */
+nav.main-nav ul li {
+    @apply py-3 px-4 rounded-l-2xl text-dark-gray hover:bg-blue hover:text-black transition-colors duration-300 pl-6
+}
+
+.nav-active {
+    @apply text-black font-bold bg-light-blue border-r-2 border-dark-blue
+}
+
+/* styling student cms */
+.cms-component:after {
+    content: "+";
+    @apply w-12 h-12 text-2xl font-bold flex items-center justify-center bg-blue rounded-full text-white mx-auto mt-6
+}

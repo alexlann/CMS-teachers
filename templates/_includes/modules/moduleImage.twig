@@ -1,0 +1,5 @@
+{% set asset = module.body.one() %}
+
+{% if asset %}
+    <img src="{{ asset.getUrl() }}" alt="{{ asset.title }}">
+{% endif %}

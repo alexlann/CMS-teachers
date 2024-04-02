@@ -1,0 +1,13 @@
+<a href="{{ siteUrl }}{{ uri }}">
+    <div class="bg-white rounded-2xl h-fit h-40 w-60 border border-light-gray hover:drop-shadow-md transition-shadow duration-300">
+        <img class="h-3/5 flex justify-center items-center bg-light-gray rounded-t-xl w-full object-cover" src="{{ thumbnail.getUrl({ quality: 70 }) }}" alt="{{ thumbnail.title }}"> 
+        <div class="h-2/5 px-3 py-2">
+            <h3 class="my-0 text-ellipsis overflow-hidden whitespace-nowrap w-50">
+                M {{ title }}
+            </h3>
+            <p class="text-dark-gray">
+                {{ type }}
+            </p>
+        </div>
+    </div>
+</a>

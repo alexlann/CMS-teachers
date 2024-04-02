@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: login
+name: Login
+propagationMethod: all
+siteSettings:
+  793e9deb-b429-4d9b-b78a-54f610e0bb24: # cms-eindwerk
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/login
+    uriFormat: login
+type: single

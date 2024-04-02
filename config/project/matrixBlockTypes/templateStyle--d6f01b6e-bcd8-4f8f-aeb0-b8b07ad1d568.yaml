@@ -1,0 +1,288 @@
+field: 0d5a77fb-2843-4022-8caf-9d29b5b8ab67 # Template H2
+fieldLayouts:
+  6e88ccc7-10a3-4c5a-8684-0e41e036d7de:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 17b755a8-ba73-4c5c-8e31-5dc5c61eb754 # Font Family
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3a8735b-5d9f-44b9-a87e-fbd0cf0403b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a1000e1c-eb4e-4216-aa07-a6ba56bb9644 # Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 744c67b2-75c0-4cae-ae0d-32967a437088
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c9cd6e88-3dea-4a7a-a810-bb93ad51e8c3 # Bold
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a4b9c3fb-0892-4059-a5ef-6f65e051daa0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3a80f648-fcfd-4f86-ba8a-aa0ff03728bb # Italic
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dd17949d-7c72-4adf-aaca-3849bd41cc0d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 322d9917-ea47-4e33-916d-534436ad9121 # Underline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb7612ea-39bd-4670-8b8b-3830fa03bcfe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fdba943c-e66b-41df-bc16-c48888ad43f7 # Font Size
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1c648bf5-1515-4250-8b04-21f4ea15011b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d122efe7-5a3a-4b4e-bcc5-c7bad455e08c
+        userCondition: null
+fields:
+  3a80f648-fcfd-4f86-ba8a-aa0ff03728bb: # Italic
+    columnSuffix: jttmgnhd
+    contentColumnType: string
+    fieldGroup: null
+    handle: italic
+    instructions: null
+    name: Italic
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Italic
+            -
+              - value
+              - italic
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - not-italic
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  17b755a8-ba73-4c5c-8e31-5dc5c61eb754: # Font Family
+    columnSuffix: tiiqcseu
+    contentColumnType: string
+    fieldGroup: null
+    handle: fontFamily
+    instructions: null
+    name: 'Font Family'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Figtree
+            -
+              - value
+              - figtree
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Old Standard TT'
+            -
+              - value
+              - oldStandardTt
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Oswald
+            -
+              - value
+              - oswald
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Raleway
+            -
+              - value
+              - raleway
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  322d9917-ea47-4e33-916d-534436ad9121: # Underline
+    columnSuffix: xshqbmnj
+    contentColumnType: string
+    fieldGroup: null
+    handle: underline
+    instructions: null
+    name: Underline
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Underline
+            -
+              - value
+              - underline
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - no-underline
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  a1000e1c-eb4e-4216-aa07-a6ba56bb9644: # Color
+    columnSuffix: fefzohpj
+    contentColumnType: text
+    fieldGroup: null
+    handle: color
+    instructions: null
+    name: Color
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c9cd6e88-3dea-4a7a-a810-bb93ad51e8c3: # Bold
+    columnSuffix: xzwuvigc
+    contentColumnType: string
+    fieldGroup: null
+    handle: bold
+    instructions: null
+    name: Bold
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Bold
+            -
+              - value
+              - font-bold
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - font-regular
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  fdba943c-e66b-41df-bc16-c48888ad43f7: # Font Size
+    columnSuffix: yjwvoqck
+    contentColumnType: text
+    fieldGroup: null
+    handle: fontSize
+    instructions: null
+    name: 'Font Size'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: templateStyle
+name: 'Template Style'
+sortOrder: 1

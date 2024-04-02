@@ -1,0 +1,19 @@
+{% set enroll = craft.app.sections.getSectionByHandle('project') %}
+{% set projectType = craft.app.fields.getFieldByHandle('projectType') %}
+{# All possible themes #}
+{% set possibleThemes = craft.categories().group('theme').all() %}
+{# All possible templateTypes #}
+{% set possibleTemplateTypes = craft.categories().group('template').all() %}
+
+{# Clicking on button shows overlay with new project form #}
+<button id="new-project" class="bg-blue rounded-2xl w-60 border border-light-gray flex justify-center items-center text-white text-8xl hover:bg-mid-blue transition-colors duration-300">
+    +
+</button>
+
+<div id="project-overlay" class="fixed hidden w-full h-full top-0 left-0 right-0 bottom-0 rgba-gray z-10">
+    <div class="fixed w-fit h-fit inset-1/2 transform-50 bg-light-blue z-20 rounded-xl">
+        <div class="px-12 py-8 h-full">
+            {% include "_includes/forms/newProjectForm.twig" %}
+        </div>
+    </div>
+</div>

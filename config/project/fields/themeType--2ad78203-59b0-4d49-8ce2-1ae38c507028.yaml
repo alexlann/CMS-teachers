@@ -1,0 +1,34 @@
+columnSuffix: chzagrne
+contentColumnType: string
+fieldGroup: ed403ee1-ec65-4436-aed7-fbf969d631c0 # Theme
+handle: themeType
+instructions: null
+name: 'Thema type'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Algemeen
+        -
+          - value
+          - general
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Theologisch
+        -
+          - value
+          - theological
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

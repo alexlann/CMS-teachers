@@ -1,0 +1,59 @@
+{% macro errorList(errors) %}
+    {% if errors %}
+        {{ ul(errors, {class: 'errors'}) }}
+    {% endif %}
+{% endmacro %}
+
+<form id="projectForm" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+    {{ csrfInput() }}
+    {{ actionInput('entries/save-entry') }}
+    {{ redirectInput('projecten/{slug}') }}
+    {{ hiddenInput('sectionId', enroll.id) }}
+    {{ hiddenInput('enabled', '1') }}
+    {{ hiddenInput('entryId', entry.id) }}
+
+    {# Sticky toolbar with styling tools #}
+    <div id="toolbar" class="sticky top-0">
+        <div class="ml-15% w-11/12 -mt-4 py-6 bg-light-blue">
+            <div class="flex justify-between content-center">
+                <div class="h-fit w-3/4 flex gap-6 flex-wrap">
+
+                </div>
+                <div class="h-full space-x-3 w-1/4 flex justify-end content-center">
+                    <a class="btn-primary-border" href="#previewProject">{{ "Preview project"|t }}</a>
+                    <button type="submit" class="btn-primary-alert">{{ "Save"|t }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# Input fields for each module #}
+    <div class="ml-15% w-11/12 mb-32">
+        <div class="w-full rounded-xl bg-white mb-6">
+            <div class="w-10/12 mx-auto py-12">
+                {% for block in entry.modules.all() %}
+                    {% namespace "fields[modules][blocks][#{block.id}]" %}
+                        {{ hiddenInput('type', block.type) }}
+                        {% switch block.type %}
+                            {% case 'moduleH1' %}
+                                {% include "_includes/modules/inputH1.twig" %}
+                            {% case 'moduleH2' %}
+                                {% include "_includes/modules/inputH2.twig" %}
+                            {% case 'moduleH3' %}
+                                {% include "_includes/modules/inputH3.twig" %}
+                            {% case 'moduleText' %}
+                                {% include "_includes/modules/inputText.twig" %}
+                            {% case 'moduleImage' %}
+                                {% include "_includes/modules/inputImage.twig" %}
+                            {% case 'moduleFile' %}
+                                {% include "_includes/modules/inputFile.twig" %}
+                            {% case 'moduleSitelink' %}
+                                {% include "_includes/modules/inputSitelink.twig" %}
+                        {% endswitch %}
+                    {% endnamespace %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</form>

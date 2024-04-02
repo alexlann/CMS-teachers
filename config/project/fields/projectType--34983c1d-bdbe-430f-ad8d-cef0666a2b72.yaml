@@ -1,0 +1,56 @@
+columnSuffix: fybqdetb
+contentColumnType: string
+fieldGroup: 2d120b16-ef61-4e55-902e-535a963add67 # Project
+handle: projectType
+instructions: null
+name: 'Project Type'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Verdiepingsdossier
+        -
+          - value
+          - Verdiepingsdossier
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Edu-escaperoom
+        -
+          - value
+          - Edu-escaperoom
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Themadossier
+        -
+          - value
+          - Themadossier
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Onderzoeksvraag
+        -
+          - value
+          - Onderzoeksvraag
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

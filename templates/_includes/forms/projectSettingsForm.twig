@@ -1,0 +1,65 @@
+{% macro errorList(errors) %}
+    {% if errors %}
+        {{ ul(errors, {class: 'errors'}) }}
+    {% endif %}
+{% endmacro %}
+
+<form id="projectSettingsForm" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+    {{ csrfInput() }}
+    {{ actionInput('entries/save-entry') }}
+    {{ redirectInput('projecten/{slug}') }}
+    {{ hiddenInput('sectionId', enroll.id) }}
+    {{ hiddenInput('enabled', '1') }}
+    {{ hiddenInput('entryId', entry.id) }}
+
+    <div class="flex justify-between items-center">
+        {# projectTypes dropdown #}
+        <div>
+            <label class="font-bold" for="fields[projectType]">{{ "Project type"|t }}</label><br>
+            <select name="fields[projectType]">
+                {% for option in projectType.options %}
+                    {% set selected = entry is defined
+                        ? entry.projectType.value == option.value
+                        : option.default %}
+
+                    <option value="{{ option.value }}"
+                        {% if selected %}selected{% endif %}
+                        >
+                        {{ option.label }}
+                    </option>
+                {% endfor %}
+            </select>
+            {{ _self.errorList(entry.getErrors('fields[projectType]')) }}
+        </div>
+
+        {# themes dropdown #}
+        <div>
+            <label class="font-bold" for="fields[theme]">{{ "Theme"|t }}</label><br>
+            <select name="fields[theme][]">
+                {% nav possibleTheme in possibleThemes %}
+                    <option value="{{ possibleTheme.id }}"
+                        {% if possibleTheme.id in relatedThemeIds %}selected{% endif %}
+                        >
+                        {{ possibleTheme.title }}
+                    </option>
+                {% endnav %}
+            </select>
+            {{ _self.errorList(entry.getErrors('fields[theme]')) }}
+        </div>
+
+        <div class="flex justify-center items-center gap-3">
+            <div>
+                {% set thumbnail = entry.thumbnail.one() %}
+                <img src="{{ thumbnail ? thumbnail.getUrl({ width: 150, height: 75, quality: 70 }) }}" alt="{{ thumbnail.title }}">
+            </div>
+            <div>
+                <label class="font-bold" for="fields[thumbnail]">{{ "Thumbnail"|t }}</label><br>
+                <input type="file" name="fields[thumbnail]">
+            </div>
+        </div>
+    </div>
+    {% if isEscapeRoom %}
+        <h3 class="site-h3">{{ "How to embed a Google Slides presentation"|t }}?<h3>
+        <p>{{ "Go to File > Share > Publish to web > Embed > Publish and copy"|t }}</p>
+    {% endif %}
+</form>

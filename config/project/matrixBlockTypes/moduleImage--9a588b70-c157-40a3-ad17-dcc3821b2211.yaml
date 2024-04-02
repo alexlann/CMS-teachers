@@ -1,0 +1,75 @@
+field: b011195c-bc62-4df7-8300-cb7c75b0b39b # Modules
+fieldLayouts:
+  3eb673e8-73ca-492b-9c1b-5a573a82ed27:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 52b83426-b091-4ef8-8588-45fb0084e9aa # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 69a0d4c4-7332-4408-958e-62c6a18031d7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8006a9bd-2e51-405d-8a33-1755e4d4868a
+        userCondition: null
+fields:
+  52b83426-b091-4ef8-8588-45fb0084e9aa: # Body
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Body
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:662158c5-f9fe-47b2-9287-d317af2b0db4' # Uploads
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:662158c5-f9fe-47b2-9287-d317af2b0db4' # Uploads
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:662158c5-f9fe-47b2-9287-d317af2b0db4' # Uploads
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: moduleImage
+name: 'Module Image'
+sortOrder: 2

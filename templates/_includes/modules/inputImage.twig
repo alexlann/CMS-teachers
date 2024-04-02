@@ -1,0 +1,10 @@
+<div class="flex items-center gap-3 my-3">
+    <label class="font-bold">{{ "Image"|t }}: </label>
+    <div>
+        {% set image = block.body.one() %}
+        <img src="{{ image ? image.getUrl({ width: 150, height: 75, quality: 70 }) }}" alt="{{ image.title }}">
+    </div>
+    <div>
+        <input type="file" name="fields[body]">
+    </div>
+</div>

@@ -1,0 +1,19 @@
+columnSuffix: osflrbsc
+contentColumnType: text
+fieldGroup: dd0fd458-3fe1-40a7-a3e2-0e6ba1f8cf49 # Login
+handle: loginTitle
+instructions: null
+name: 'Login Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

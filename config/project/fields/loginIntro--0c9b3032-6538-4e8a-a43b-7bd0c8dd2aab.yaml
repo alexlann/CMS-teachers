@@ -1,0 +1,28 @@
+columnSuffix: fkeroeaw
+contentColumnType: text
+fieldGroup: dd0fd458-3fe1-40a7-a3e2-0e6ba1f8cf49 # Login
+handle: loginIntro
+instructions: null
+name: 'Login Intro'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes:
+    - 662158c5-f9fe-47b2-9287-d317af2b0db4 # Uploads
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: null
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

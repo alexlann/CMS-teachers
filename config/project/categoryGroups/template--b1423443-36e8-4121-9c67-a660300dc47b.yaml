@@ -1,0 +1,130 @@
+defaultPlacement: end
+fieldLayouts:
+  1bba4e94-9444-408b-b13a-958a2abf1f55:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: d3d8da86-2bd7-4ae2-99c0-045de1e35d63
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a5599761-6f7f-4122-a161-ce37fe3081f0 # Thumbnail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1a57df0-ab09-48f1-b667-59a6e50725db
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c36661a8-fbe9-4c76-8ade-71d9d7863ed5 # Template H1
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b7e35268-d14e-4e9e-91d9-eab88505d445
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0d5a77fb-2843-4022-8caf-9d29b5b8ab67 # Template H2
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d4ce419-992c-4498-838a-2a7025bfed2b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 66ead35a-b47d-4779-9c3d-51d9a704fbf1 # Template H3
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 93eae784-6b76-435e-b7f5-7cb626b7632b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7ed1d3ee-593a-44f8-83ed-c1c24eeea911 # Template Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 417d0ebf-0929-460c-b05a-45ea59604873
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5ef5528f-2252-48fc-83f8-8482a0bab94a # Template File
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e9c55a64-a012-4295-a21d-e95f4c4fa831
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 57038add-1170-4f1e-8e72-0bf27eaf66a1 # Template Sitelink
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4d7f68d9-24f0-4e82-bdd4-9ec92750d62c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b9ce59c7-93c6-44f8-9079-b492df6961f6
+        userCondition: null
+handle: template
+name: Template
+siteSettings:
+  793e9deb-b429-4d9b-b78a-54f610e0bb24: # cms-eindwerk
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 3c1b6e9c-0a00-498d-9aa7-b9be0bba982d

@@ -1,0 +1,70 @@
+defaultPlacement: end
+fieldLayouts:
+  b3b23368-6bd9-48dc-8ce2-2391798fa381:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 805d9240-dd68-4e41-a1d6-e1594fc3becc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 981031c7-feb9-4f10-853f-b9c28a743f8a # Icon
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a5944f1-c1ee-4dcb-9ef9-0a0e280b274e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2ad78203-59b0-4d49-8ce2-1ae38c507028 # Thema type
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 94a1355c-0a84-4a91-9e8d-3240d5edb8ee
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fa0e2e4b-9f20-4a0c-a0f2-2b24c22d37c5
+        userCondition: null
+handle: theme
+name: Thema
+siteSettings:
+  793e9deb-b429-4d9b-b78a-54f610e0bb24: # cms-eindwerk
+    hasUrls: true
+    template: _pages\themeDetail.twig
+    uriFormat: 'themas/{slug}'
+structure:
+  maxLevels: null
+  uid: a5187d39-665a-43b5-8fe9-eb30a96ecfd9

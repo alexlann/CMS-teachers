@@ -1,0 +1,55 @@
+fieldLayouts:
+  75609c46-248c-4ce5-8cca-2a0418b460ba:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: adb8fa1f-ab39-4d9a-8d0f-275a60d11d1f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 981031c7-feb9-4f10-853f-b9c28a743f8a # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79471277-c8c8-453a-a99e-92b76be82f25
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bb349237-6732-47fe-a187-cd3fde959973
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: e409ced4-59e8-4959-a22b-a923fbcad2e8 # Algmeen thema
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,60 @@
+{% requireLogin %}
+{% set searchQuery = craft.app.request.getParam('q') %}
+{# Search results that are themes #}
+{% set themes = craft.categories()
+    .group('theme')
+    .search(searchQuery)
+    .all()
+%}
+{# Search results that are projects #}
+{% set projects = craft.entries()
+    .section('project')
+    .search(searchQuery)
+    .all()
+%}
+{% set resultsCount = themes|length + projects|length %}
+
+{% extends "_layouts/site" %}
+
+{% block content %}
+    {% include "_includes/sideBar.twig" %}
+    <div class="content-wrapper">
+        {% include "_includes/searchBar.twig" %}
+        <h1 class="site-h1">
+            {{ "Search results"|t }}
+        </h1>
+        {% if resultsCount %}
+            <p>{{ resultsCount }} {{ "results"|t }}:</p>
+            {# If search results contain projects, show projects #}
+            {% if projects|length %}
+                <h2 class="site-h2">{{ "Projects"|t }}</h2>
+                <div class="flex flex-wrap items-stretch gap-6 mb-12">
+                    {% for project in projects %}
+                        {% include "_includes/cards/project.twig" with {
+                            uri: project.uri,
+                            thumbnail: project.thumbnail.one(),
+                            title: project.title,
+                            type: project.projectType.label,
+                        } %}
+                    {% endfor %}                    
+                </div>
+            {% endif %}
+            {# If search results contains themes, show themes #}
+            {% if themes|length %}
+                <h2 class="site-h2">{{ "Themes"|t }}</h2>
+                <div class="flex flex-wrap gap-6 mb-12">
+                    {% for theme in themes %}
+                        {% include "_includes/cards/theme.twig" with {
+                            uri: theme.uri,
+                            icon: theme.icon,
+                            title: theme.title
+                        } %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% else %}
+            <p>{{ "We didn't find any results for"|t }} "{{ searchQuery }}".</p>
+        {% endif %}
+    </div>
+    
+{% endblock %}

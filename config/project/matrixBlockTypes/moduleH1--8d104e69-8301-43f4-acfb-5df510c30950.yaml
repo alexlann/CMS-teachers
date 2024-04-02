@@ -1,0 +1,515 @@
+field: b011195c-bc62-4df7-8300-cb7c75b0b39b # Modules
+fieldLayouts:
+  88bed916-9ebe-4bf3-ae04-7357d9714c0d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 51e98889-0568-4545-a1b3-0fe2292801b5 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 56d03331-6926-4f03-8d02-d83ec6bf8d1e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 285a9e4f-a826-43b4-9126-4b1a0299c6a8 # Font Family
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3c88a55e-7638-4f9e-81bd-f682be116338
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 17022e38-928b-4339-ac86-094e11de9743 # Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: caeb0d9d-8f8b-41b6-9622-df82d5165732
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aff3e8f3-686a-451f-9492-e2c19bc9ac96 # Bold
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06ae3820-aa5a-4b5e-8c92-1223f217d28e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 39cff009-6239-4de3-8362-c83b5e0db889 # Italic
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8087dfa6-84f1-455f-b630-23be2ae8ff7b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f9599bcd-9f7a-4e2a-bc30-9cd9c1bf1583 # Underline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14affa18-c6ca-46e8-941d-37e241554146
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 45ff40e6-f56a-4bee-baca-8dc37cb91754 # Font Size
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a804345-cff6-48f6-a32b-02371250afcb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bccfb11d-eddf-4406-9058-226d711d321d
+        userCondition: null
+fields:
+  39cff009-6239-4de3-8362-c83b5e0db889: # Italic
+    columnSuffix: mcfcbcfi
+    contentColumnType: string
+    fieldGroup: null
+    handle: italic
+    instructions: null
+    name: Italic
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Italic
+            -
+              - value
+              - italic
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - not-italic
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  45ff40e6-f56a-4bee-baca-8dc37cb91754: # Font Size
+    columnSuffix: sdxpfilf
+    contentColumnType: string
+    fieldGroup: null
+    handle: fontSize
+    instructions: null
+    name: 'Font Size'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - '12'
+            -
+              - value
+              - text-xs
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '14'
+            -
+              - value
+              - text-sm
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '16'
+            -
+              - value
+              - text-base
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '18'
+            -
+              - value
+              - text-lg
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '20'
+            -
+              - value
+              - text-xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '24'
+            -
+              - value
+              - text-2xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '30'
+            -
+              - value
+              - text-3xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '36'
+            -
+              - value
+              - text-4xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '48'
+            -
+              - value
+              - text-5xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '60'
+            -
+              - value
+              - text-6xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '72'
+            -
+              - value
+              - text-7xl
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  51e98889-0568-4545-a1b3-0fe2292801b5: # Body
+    columnSuffix: cdzreyvc
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Body
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  285a9e4f-a826-43b4-9126-4b1a0299c6a8: # Font Family
+    columnSuffix: ohxsjdoa
+    contentColumnType: string
+    fieldGroup: null
+    handle: fontFamily
+    instructions: null
+    name: 'Font Family'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Figtree
+            -
+              - value
+              - figtree
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Old Standard TT'
+            -
+              - value
+              - oldStandardTt
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Oswald
+            -
+              - value
+              - oswald
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Raleway
+            -
+              - value
+              - raleway
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Template Font'
+            -
+              - value
+              - templateFont
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  17022e38-928b-4339-ac86-094e11de9743: # Color
+    columnSuffix: qhfdjjcd
+    contentColumnType: string
+    fieldGroup: null
+    handle: color
+    instructions: null
+    name: Color
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Black
+            -
+              - value
+              - font-black
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Dark gray'
+            -
+              - value
+              - font-dark-gray
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Blue
+            -
+              - value
+              - font-dark-blue
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Green
+            -
+              - value
+              - text-green
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Red
+            -
+              - value
+              - text-red
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Orange
+            -
+              - value
+              - text-orange
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Purple
+            -
+              - value
+              - text-purple
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  aff3e8f3-686a-451f-9492-e2c19bc9ac96: # Bold
+    columnSuffix: iytitihe
+    contentColumnType: string
+    fieldGroup: null
+    handle: bold
+    instructions: null
+    name: Bold
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Bold
+            -
+              - value
+              - font-bold
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - font-regular
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  f9599bcd-9f7a-4e2a-bc30-9cd9c1bf1583: # Underline
+    columnSuffix: dlothhpi
+    contentColumnType: string
+    fieldGroup: null
+    handle: underline
+    instructions: null
+    name: Underline
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Underline
+            -
+              - value
+              - underline
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - no-underline
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+handle: moduleH1
+name: 'Module H1'
+sortOrder: 3

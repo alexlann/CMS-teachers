@@ -1,0 +1,25 @@
+{% macro is_active(segment) %}
+	{% if craft.app.request.segments | first == segment %}nav-active{% endif %}
+{% endmacro %}
+
+<div class="fixed left-0 top-0 h-screen w-15% bg-white py-12 border-r border-light-gray z-10">
+    <a href="/dashboard">
+        <img class="mx-auto w-10/12 pb-12" src="/assets/images/artevelde_logo.png" alt="Artevelde Hogeschool">
+    </a>
+    <nav class="main-nav">
+        <ul class="space-y-6">
+            <li class="{{ _self.is_active('dashboard') }}">
+                <a href="/dashboard"><b>D </b>Dashboard</a>
+            </li>
+            <li class="{{ _self.is_active('algemeen') }}">
+                <a href="/algemeen"><b>A </b>Algemene thema's</a>
+            </li>
+            <li class="{{ _self.is_active('theologisch') }}">
+                <a href="/theologisch"><b>T </b>Theologische thema's</a>
+            </li>
+            <li class="{{ _self.is_active('projecten') }}">
+                <a href="/projecten"><b>P </b>Mijn projecten</a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,13 @@
+{% extends "_layouts/site" %}
+
+{% block content %}
+    <div class="w-4/5 mx-auto">
+        <h1 class="site-h1">
+            404 - {{ "Page not found"|t }}
+        </h1>
+        <p>
+            {{ "The page you are looking for does not exist"|t }}.
+        </p>
+        <a href="/" class="btn-secondary">{{ "Go home"|t }}</a>
+    </div>
+{% endblock %}

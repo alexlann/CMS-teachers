@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 1a5e6820-d72c-4a6e-bbee-bcdb780052ac # Template
+handle: templateH1
+instructions: null
+name: 'Template H1'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_templateh1}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

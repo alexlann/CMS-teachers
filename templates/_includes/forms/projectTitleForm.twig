@@ -1,0 +1,24 @@
+{% macro errorList(errors) %}
+    {% if errors %}
+        {{ ul(errors, {class: 'errors'}) }}
+    {% endif %}
+{% endmacro %}
+
+<form id="projectTitleForm" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+    {{ csrfInput() }}
+    {{ actionInput('entries/save-entry') }}
+    {{ redirectInput('projecten/{slug}') }}
+    {{ hiddenInput('sectionId', enroll.id) }}
+    {{ hiddenInput('enabled', '1') }}
+    {{ hiddenInput('entryId', entry.id) }}
+
+    <h1 class="site-h1 w-full flex gap-3">
+        {{ theme.icon.value|raw }}
+        {{ input('text', 'title', entry.title, {
+            id: 'title',
+            class: "input-project ",
+        }) }}
+    </h1>
+
+    {{ _self.errorList(entry.getErrors('title')) }}
+</form>

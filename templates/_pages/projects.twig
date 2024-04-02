@@ -1,0 +1,24 @@
+{% extends "_layouts/site" %}
+
+{% block content %}
+    {% include "_includes/sideBar.twig" %}
+
+    <div class="content-wrapper">
+        {% include "_includes/searchBar.twig" %}
+        <h1>
+            {{ entry.title }}
+        </h1>
+        <div class="flex flex-wrap items-stretch gap-6">
+            {% set projects = craft.entries.section('project').all() %}
+            {% for project in projects %}
+                {% include "_includes/cards/project.twig" with {
+                    uri: project.uri,
+                    thumbnail: project.thumbnail.one(),
+                    title: project.title,
+                    type: project.projectType,
+                } %}
+            {% endfor %}                    
+        </div>
+    </div>
+    
+{% endblock %}

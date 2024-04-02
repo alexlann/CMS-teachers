@@ -1,0 +1,515 @@
+field: b011195c-bc62-4df7-8300-cb7c75b0b39b # Modules
+fieldLayouts:
+  96e670ab-55ae-46e4-ac72-5ce6f4302a96:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d2e21dc2-1c24-4e69-804b-2130edb2f413 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 01332cfb-a670-484a-8a4d-17a6080effb6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c43482b0-a07a-44d3-b7c1-8cdb58108561 # Font Family
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e1f6cdad-e4fd-4266-bfe7-0d7b6c0bb1db
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0d36275d-2974-4452-8338-227be1d53cf0 # Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 43335a30-f24b-4c57-af7c-42f78afc0514
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 47fb46d9-4e3c-4f9d-b60b-ba1eab854655 # Bold
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 40c64b08-963f-4ea7-9d65-666e71106bdf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0e7cb994-9781-4554-99c2-fbc2c747162c # Italic
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2971f70c-ff6a-47bc-97fe-9ce5d2e16903
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b1796533-d078-42ca-a4d8-a4dbb9bf4f7f # Underline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b9449167-8187-4ce9-8e8e-fa6b5c0ccf02
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3f1be27b-db75-4c85-b8f8-9d5dbc9b198b # Font Size
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf534572-2c7e-4122-a10d-8541510365de
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4c51e10b-bf02-4b26-bcb3-8d5149f1d725
+        userCondition: null
+fields:
+  0d36275d-2974-4452-8338-227be1d53cf0: # Color
+    columnSuffix: oxzjbids
+    contentColumnType: string
+    fieldGroup: null
+    handle: color
+    instructions: null
+    name: Color
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Black
+            -
+              - value
+              - text-black
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Dark gray'
+            -
+              - value
+              - text-dark-gray
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Blue
+            -
+              - value
+              - text-dark-blue
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Green
+            -
+              - value
+              - text-green
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Red
+            -
+              - value
+              - text-red
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Orange
+            -
+              - value
+              - text-orange
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Purple
+            -
+              - value
+              - text-purple
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  0e7cb994-9781-4554-99c2-fbc2c747162c: # Italic
+    columnSuffix: gyxtezdl
+    contentColumnType: string
+    fieldGroup: null
+    handle: italic
+    instructions: null
+    name: Italic
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Italic
+            -
+              - value
+              - italic
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - not-italic
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  3f1be27b-db75-4c85-b8f8-9d5dbc9b198b: # Font Size
+    columnSuffix: rjpkgwbv
+    contentColumnType: string
+    fieldGroup: null
+    handle: fontSize
+    instructions: null
+    name: 'Font Size'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - '12'
+            -
+              - value
+              - text-xs
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '14'
+            -
+              - value
+              - text-sm
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '16'
+            -
+              - value
+              - text-base
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '18'
+            -
+              - value
+              - text-lg
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '20'
+            -
+              - value
+              - text-xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '24'
+            -
+              - value
+              - text-2xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '30'
+            -
+              - value
+              - text-3xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '36'
+            -
+              - value
+              - text-4xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '48'
+            -
+              - value
+              - text-5xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '60'
+            -
+              - value
+              - text-6xl
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '72'
+            -
+              - value
+              - text-7xl
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  47fb46d9-4e3c-4f9d-b60b-ba1eab854655: # Bold
+    columnSuffix: nbwhjhji
+    contentColumnType: string
+    fieldGroup: null
+    handle: bold
+    instructions: null
+    name: Bold
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Bold
+            -
+              - value
+              - font-bold
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - font-regular
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  b1796533-d078-42ca-a4d8-a4dbb9bf4f7f: # Underline
+    columnSuffix: urhrseyl
+    contentColumnType: string
+    fieldGroup: null
+    handle: underline
+    instructions: null
+    name: Underline
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Underline
+            -
+              - value
+              - underline
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Regular
+            -
+              - value
+              - no-underline
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  c43482b0-a07a-44d3-b7c1-8cdb58108561: # Font Family
+    columnSuffix: wbbdgbjs
+    contentColumnType: string
+    fieldGroup: null
+    handle: fontFamily
+    instructions: null
+    name: 'Font Family'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Figtree
+            -
+              - value
+              - figtree
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Old Standard TT'
+            -
+              - value
+              - oldStandardTt
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Oswald
+            -
+              - value
+              - oswald
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Raleway
+            -
+              - value
+              - raleway
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Template Font'
+            -
+              - value
+              - templateFont
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  d2e21dc2-1c24-4e69-804b-2130edb2f413: # Body
+    columnSuffix: qfczuhmm
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Body
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: moduleText
+name: 'Module Text'
+sortOrder: 1

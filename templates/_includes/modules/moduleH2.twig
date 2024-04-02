@@ -1,0 +1,17 @@
+{% for templateField in entry.templateType %}
+    {% for elementStyle in templateField.templateH2 %}
+        {# Get styles; if templateStyle has been overwritten by moduleStyle, use moduleStyle #}
+        {# TemplateFont is the font used when the user hasn't made any changes to the font,
+        otherwise there is a default font and the elementstyle font isn't loaded #}
+        {% set fontFamily = module.fontFamily is not same as("templateFont") ? elementStyle.fontFamily : module.fontFamily %}
+        {% set color = module.color is null ? elementStyle.color : module.color %}
+        {% set bold = module.bold.value is null ? elementStyle.bold : module.bold %}
+        {% set italic = module.italic.value is null ? elementStyle.italic : module.italic %}
+        {% set underline = module.underline.value is null ? elementStyle.underline : module.underline %}
+        {% set fontSize = module.fontSize is null ? elementStyle.fontSize : module.fontSize %}
+        {% set style = fontFamily ~ " " ~ color ~ " " ~ fontSize ~ " " ~ bold ~ " " ~ italic ~ " " ~ underline %}
+        <h2 class="{{ style }}">
+            {{ module.body }}
+        </h2>
+    {% endfor %}
+{% endfor %}

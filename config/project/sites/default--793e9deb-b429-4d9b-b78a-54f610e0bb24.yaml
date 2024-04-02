@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: cms-eindwerk
+primary: true
+siteGroup: ec914301-c234-4524-b91b-75775ebe83c0 # cms-eindwerk
+sortOrder: 1

@@ -1,0 +1,35 @@
+<form method="post" accept-charset="UTF-8" class="space-y-6">
+    {{ csrfInput() }}
+    {{ actionInput('users/login') }}
+
+    {{ input('text', 'loginName', null, {
+        id: 'loginName',
+        autocomplete: 'username',
+        class: 'input-large',
+        placeholder: 'Emailadres'
+    }) }}
+
+    {{ input('password', 'password', null, {
+        id: 'password',
+        class: 'input-large',
+        placeholder: 'Wachtwoord'
+    }) }}
+
+    <div class="flex justify-between items-center">
+        <div class="flex">
+            {{ input('checkbox', 'rememberMe', '1', {
+                id: 'rememberMe',
+                class: 'accent-dark-blue mr-2'
+            }) }}
+            <label for="rememberMe">{{ "Stay logged in"|t }}</label>
+        </div>
+        <a class="hover:text-dark-blue transition-colors duration-300" href="{{ url('reset-password') }}">{{ "Forgot password"|t }}</a>
+    </div>
+
+    <button class="btn-primary-lg">{{ "Log in"|t }}</button>
+    
+    {# Show errormessages if present #}
+    {% if errorMessage is defined %}
+        <p class="errors">{{ errorMessage }}</p>
+    {% endif %}
+</form>

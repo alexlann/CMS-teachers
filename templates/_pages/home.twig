@@ -1,0 +1,43 @@
+{% extends "_layouts/site" %}
+
+{% block content %}
+    <img class="absolute left-1/10 top-8 w-1/12" src="/uploads/artevelde_logo.png" alt="Artevelde Hogeschool">
+    <div class="w-4/5 mx-auto h-screen">
+        <div class="flex justify-between items-center h-full">
+            <div class="w-1/2">
+                <div class="mb-12">
+                    <h1 class="text-7xl mb-12">
+                        {{ entry.homeTitle }}
+                    </h1>
+                    <div class="w-4/5">
+                        {{ entry.homeIntro }}
+                    </div>
+                </div>
+                <form class="w-1/2">
+                    <h3>
+                        {{ "Ask access to the platform"|t }}
+                    </h3>
+                    <div class="relative">
+                        <input class="input-large" type="email" placeholder="Emailadres">
+                        <button class="btn-secondary absolute right-4 top-3" type="submit">{{ "Verstuur"|t }}</button>
+                    </div>
+                </form>
+            </div>
+            <div class="w-1/4">
+                <h1 class="w-fit mx-auto">{{ "Log in"|t }}</h1>
+                <form class="space-y-6" action="">
+                    <input class="input-large" type="email" placeholder="Emailadres">
+                    <input class="input-large" type="password" placeholder="Wachtwoord">
+                    <div class="flex justify-between items-center">
+                        <div class="flex">
+                            <input class="accent-dark-blue mr-2" type="checkbox" name="#" id="#">
+                            <label for="#">{{ "Stay logged in"|t }}</label>
+                        </div>
+                        <a class="hover:text-dark-blue transition-colors duration-300" href="#">{{ "Forgot password"|t }}</a>
+                    </div>
+                    <button class="btn-primary-lg" type="submit">{{ "Log in"|t }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

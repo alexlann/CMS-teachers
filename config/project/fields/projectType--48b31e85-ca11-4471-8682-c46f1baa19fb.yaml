@@ -1,0 +1,56 @@
+columnSuffix: qcpvvbrx
+contentColumnType: string
+fieldGroup: 2d120b16-ef61-4e55-902e-535a963add67 # Project
+handle: projectType
+instructions: null
+name: 'Project type'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Themadossier
+        -
+          - value
+          - themeDossier
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Verdiepingsdossier
+        -
+          - value
+          - depthDossier
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Edu Escaperoom'
+        -
+          - value
+          - escaperoom
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Onderzoeksvraag
+        -
+          - value
+          - researchQuestion
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

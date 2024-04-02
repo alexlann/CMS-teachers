@@ -1,0 +1,26 @@
+{% extends "_layouts/site" %}
+
+{% block content %}
+    {% include "_includes/sideBar.twig" %}
+    <div class="content-wrapper">
+        {% include "_includes/searchBar.twig" %}
+        <h1>
+            {{ entry.title }}
+        </h1>
+        <div class="flex flex-wrap gap-6 mb-12">
+            {% if entry.uri == "algemeen" %}
+                {% set themes = craft.entries.section('generalTheme').all() %}
+            {% elseif entry.uri == "theologisch" %}
+                {% set themes = craft.entries.section('theologicalTheme').all() %}
+            {% endif %}
+            {% for theme in themes %}
+                {% include "_includes/cards/theme.twig" with {
+                    uri: theme.uri,
+                    icon: theme.icon,
+                    title: theme.title
+                } %}
+            {% endfor %}
+        </div>
+    </div>
+    
+{% endblock %}

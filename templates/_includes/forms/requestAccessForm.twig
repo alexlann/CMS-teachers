@@ -1,0 +1,29 @@
+{% macro errorList(errors) %}
+    {% if errors %}
+        {{ ul(errors, {class: 'errors'}) }}
+    {% endif %}
+{% endmacro %}
+
+{% set submission = submission ?? null %}
+
+<form method="post" action="" accept-charset="UTF-8">
+    {{ csrfInput() }}
+    {{ actionInput('contact-form/send') }}
+
+    {{ input('email', 'fromEmail', submission.fromEmail ?? '', {
+        id: 'from-email',
+        autocomplete: 'email',
+        class: 'input-large',
+        placeholder: 'Emailadres'
+    }) }}
+    {{ submission ? _self.errorList(submission.getErrors('fromEmail')) }}
+
+    {{ input('hidden', {
+        text: 'Someone requests access to the platform',
+        id: 'message',
+        name: 'message',
+    }) }}
+    {{ submission ? _self.errorList(submission.getErrors('message')) }}
+
+    <button class="btn-secondary absolute right-4 top-3" type="submit">{{ "Send"|t }}</button>
+</form>

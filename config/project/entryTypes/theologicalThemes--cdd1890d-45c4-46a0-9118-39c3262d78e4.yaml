@@ -1,0 +1,43 @@
+fieldLayouts:
+  7a7e12f1-9bae-4e8c-bb89-411a4a19ed09:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f12f843c-68b0-41d5-8f04-dff0652f2b5c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f8bb401f-34ce-43cd-a8df-3b82498d8559
+        userCondition: null
+handle: theologicalThemes
+hasTitleField: false
+name: 'Theologische thema''s'
+section: c5852197-6c74-4556-a75e-24c2ba1af33e # Theologische thema's
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

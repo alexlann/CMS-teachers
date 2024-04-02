@@ -1,0 +1,49 @@
+fieldLayouts:
+  ea833972-5689-4391-bb88-aa8d6043fc8b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 7dbc6466-7967-4be9-8586-7718859cc33e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 981031c7-feb9-4f10-853f-b9c28a743f8a # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5ac7ba12-8496-405f-980e-bff42e0758c0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dd0cd1da-c6da-4302-bf31-3b3a628516d0
+        userCondition: null
+handle: themetag
+name: Themetag

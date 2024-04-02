@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request access</title>
+</head>
+<body>
+    <div>
+        <div style="font-family: inherit; text-align: left">
+            <table>
+                <tr><td>{{ 'Appointment date'|t }}</td><td> {{ submission.appointmentDate }}</td></tr>
+                <tr><td>{{ 'Appointment time'|t }}</td><td>{{ submission.appointmentTime }}</td></tr>
+                <tr><td>{{ 'Name'|t }}</td><td>{{ submission.fromName }}</td></tr>
+                <tr><td>{{ 'Phone number'|t }}</td><td>{{ submission.fromTel }}</td></tr>
+                <tr><td>{{ 'E-mail address'|t }}</td><td>{{ submission.fromEmail }}</td></tr>
+                <tr><td>{{ 'Preferred contact method'|t }}</td><td>{{ submission.contactChoice }}</td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

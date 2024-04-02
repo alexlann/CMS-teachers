@@ -1,0 +1,103 @@
+fieldLayouts:
+  fc5c3791-6ffd-4bcf-a94a-ecc908bebaed:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a50475f3-c38f-4049-9793-42b53be328ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 48b31e85-ca11-4471-8682-c46f1baa19fb # Project type
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a3e8a3ea-a512-4376-9b40-5c1b7d7199d6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: e617fb6e-6a40-433d-92da-f65e5e1a581a # Thema
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 37b4cd8a-d933-45e2-b1a4-dcbc80e00d10
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 693099bf-4102-479c-a151-95d62605968b # Template Type
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 65814b84-f5db-429d-8c38-687d5afcbd33
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: a5599761-6f7f-4122-a161-ce37fe3081f0 # Thumbnail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 02ef5dfc-576e-402d-9c40-36106fbb3a19
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: b011195c-bc62-4df7-8300-cb7c75b0b39b # Modules
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e96272c-fc1a-49fa-8a33-aa578b8b517a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0482497a-8e3e-46c5-95ff-15aada0dffd0
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 63061f77-c534-44ff-a26c-705fabb6ccce # Project
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

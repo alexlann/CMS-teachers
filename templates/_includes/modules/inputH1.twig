@@ -1,0 +1,138 @@
+{# Styling form #}
+{# For some reason "block" does not exist if a different file is included in the same place as inputH1 (in projectForm) so the form is placed here #}
+{% if isDossier %}          
+    {% macro errorList(errors) %}
+        {% if errors %}
+            {{ ul(errors, {class: 'errors'}) }}
+        {% endif %}
+    {% endmacro %}
+
+    <div class="flex gap-6 border-2 rounded border-black px-4 py-2 mb-2">
+        <form id="projectForm" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+            {{ csrfInput() }}
+            {{ actionInput('entries/save-entry') }}
+            {{ redirectInput('projecten/{slug}') }}
+            {{ hiddenInput('sectionId', enroll.id) }}
+            {{ hiddenInput('enabled', '1') }}
+            {{ hiddenInput('entryId', block.id) }}
+
+            <div>
+                {# Element that will be styled #}
+                {{ "Title 1"|t }}
+            </div>
+
+            {# Dropdown font family #}
+            <div>
+                <label class="font-bold" for="fields[fontFamily]">{{ "Font family"|t }}</label><br>
+                <select name="fields[fontFamily]" id="fields[fontFamily]">
+                    {% for option in block.fontFamily.options %}
+                        {% set selected = block is defined
+                            ? block.fontFamily.value == option.value
+                            : option.default %}
+
+                        <option value="{{ option.value }}"
+                            {% if selected %}selected{% endif %}
+                            >
+                            {{ option.label }}
+                        </option>
+                    {% endfor %}
+                </select>
+                {{ _self.errorList(entry.getErrors('fields[fontFamily]')) }}
+            </div>
+
+            {# Dropdown text color #}
+            <div>
+                <label class="font-bold" for="fields[color]">{{ "Text color"|t }}</label><br>
+                <select name="fields[color]" id="fields[color]">
+                    {% for option in block.color.options %}
+                        {% set selected = block is defined
+                            ? block.color.value == option.value
+                            : option.default %}
+
+                        <option class="{{option.value}}" value="{{ option.value }}"
+                            {% if selected %}selected{% endif %}
+                            >
+                            {{ option.label }}
+                        </option>
+                    {% endfor %}
+                </select>
+                {{ _self.errorList(entry.getErrors('fields[color]')) }}
+            </div>
+
+            {# Dropdown font size #}
+            <div>
+                <label class="font-bold" for="fields[fontSize]">{{ "Font size"|t }}</label><br>
+                <select name="fields[fontSize]" id="fields[fontSize]">
+                    {% for option in block.fontSize.options %}
+                        {% set selected = block is defined
+                            ? block.fontSize.value == option.value
+                            : option.default %}
+
+                        <option value="{{ option.value }}"
+                            {% if selected %}selected{% endif %}
+                            >
+                            {{ option.label }}
+                        </option>
+                    {% endfor %}
+                </select>
+                {{ _self.errorList(entry.getErrors('fields[fontSize]')) }}
+            </div>
+
+            {# Radio bold #}
+            <ul>
+                {% nav option in block.bold.options %}
+                    <li>
+                        <label for={{option.value}} class={{option.value}}>
+                                {{ option.label }}
+                        </label>
+                        <input type="radio"
+                            name="fields[bold]"
+                            value="{{ option.value }}"
+                            id="{{ option.value }}"
+                        >
+                    </li>
+                {% endnav %}
+            </ul>
+
+            {# Radio italic #}
+            <ul>
+                {% nav option in block.italic.options %}
+                    <li>
+                        <label for={{option.value}} class={{option.value}}>
+                                {{ option.label }}
+                        </label>
+                        <input type="radio"
+                            name="fields[italic]"
+                            value="{{ option.value }}"
+                            id="{{ option.value }}"
+                        >
+                    </li>
+                {% endnav %}
+            </ul>
+
+            {# Radio underline #}
+            <ul>
+                {% nav option in block.underline.options %}
+                    <li>
+                        <label for={{option.value}} class={{option.value}}>
+                                {{ option.label }}
+                        </label>
+                        <input type="radio"
+                            name="fields[underline]"
+                            value="{{ option.value }}"
+                            id="{{ option.value }}"
+                        >
+                    </li>
+                {% endnav %}
+            </ul>
+        </form>
+    </div>
+{% endif %}
+
+<h1 class="w-full">
+    <label class="font-bold underline hover:text-dark-blue cursor-pointer">{{ "Title 1"|t }}: </label>
+    {{ input('text', 'fields[body]', block.body, {
+        id: 'fields[body]',
+        class: "input-project",
+    }) }}
+</h1>

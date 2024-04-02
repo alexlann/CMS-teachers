@@ -1,0 +1,79 @@
+{% requireLogin %}
+
+{% set isDossier = entry.projectType.value is same as("themeDossier") or entry.projectType.value is same as("depthDossier") %}
+{% set isResearchQuestion = entry.projectType.value is same as("researchQuestion") %}
+{% set isEscapeRoom = entry.projectType.value is same as("escaperoom") %}
+
+{# For forms #}
+{% set entry = entry ?? create('craft\\elements\\Entry') %}
+{% set enroll = craft.app.sections.getSectionByHandle('project') %}
+{% set projectType = craft.app.fields.getFieldByHandle('projectType') %}
+{# All possible themes #}
+{% set possibleThemes = craft.categories().group('theme').all() %}
+{# The currently related theme ids (the theme this project is already linked to) #}
+{% set relatedThemeIds = entry is defined ? entry.theme.ids() : [] %}
+{# All possible templateTypes #}
+{% set possibleTemplateTypes = craft.categories().group('template').all() %}
+{# The currently related templateType ids (the templateType this project is already linked to) #}
+{% set relatedTemplateTypeIds = entry is defined ? entry.templateType.ids() : [] %}
+
+{# Get theme of project #}
+{% set theme = entry.theme.one() %}
+{% extends "_layouts/site" %}
+
+{% block content %}
+    {% include "_includes/sideBar.twig" %}
+
+    <div class="content-wrapper">
+        {% include "_includes/searchBar.twig" %}
+    </div>
+
+    {# If user is author, show forms #}
+    {% if currentUser.id == entry.author.id %}
+        <div class="content-wrapper">
+            {% include "_includes/forms/projectTitleForm.twig" %}
+            <div class="w-full flex justify-between">
+                <h2 class="site-h2">{{ entry.projectType.label }}: {{ theme.title|lower }}</h2>
+                <button id="project-settings" class="w-fit"><i class="fa-solid fa-gear"></i></button>
+            </div>
+            <div id="collapsible" class="max-h-0 overflow-hidden">
+                {% include "_includes/forms/projectSettingsForm.twig" %}
+            </div>
+        </div>
+        {% include "/_includes/forms/projectForm.twig" %}
+
+    {% endif %}
+
+    {# Show modules #}
+    <div class="ml-15% w-11/12 mb-32">
+        {# If user is author, set title to preview, else set title to project title #}
+        {% if currentUser.id == entry.author.id %}
+            <h1 class="site-h1" id="previewProject">{{ "Preview"|t }}</h1>
+        {% else %}
+            <h1 class="site-h1">{{ theme.icon.value|raw }} {{entry.title}}</h1>
+        {% endif %}
+        <div class="w-full rounded-xl bg-white mb-6">
+            <div class="w-10/12 mx-auto py-12">
+                {% for module in entry.modules %}
+                    {% include "_includes/modules/" ~ module.type %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+    {# Load tailwind classes that come from backend #}
+    <div class="hidden">
+        <div class="text-red text-7xl underline"></div>
+        <div class="text-dark-blue text-6xl font-bold"></div>
+        <div class="text-black text-5xl no-underline"></div>
+        <div class="text-orange text-4xl font-regular"></div>
+        <div class="text-green text-3xl italic"></div>
+        <div class="text-purple text-2xl not-italic"></div>
+        <div class="text-dark-gray text-xl"></div>
+        <div class="text-base"></div>
+        <div class="text-ms"></div>
+        <div class="text-xs"></div>
+    </div>
+    
+{% endblock %}

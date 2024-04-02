@@ -1,0 +1,15 @@
+{% set assets = block.body.all() %}
+
+<ul class="my-3">
+    {% for asset in assets %}
+        <li class="flex items-center gap-3">
+            <label class="font-bold">{{ "File"|t }}: </label>
+            <div>
+                {{ asset.filename }}
+            </div>
+            <div>
+                <input type="file" name="fields[body]">
+            </div>
+        </li>
+    {% endfor %}
+</ul>
